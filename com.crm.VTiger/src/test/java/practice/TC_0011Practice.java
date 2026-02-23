@@ -11,7 +11,7 @@ import objectRepo.CreatingnewContact;
 import objectRepo.HomePage;
 import objectRepo.LeadPage;
 
-public class TC_006Practice extends BaseClass {
+public class TC_0011Practice extends BaseClass {
 
 	@Test
 	public void createnewLead() throws IOException

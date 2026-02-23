@@ -4,12 +4,14 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import objectRepo.HomePage;
 import objectRepo.Loginpage;
@@ -23,10 +25,15 @@ public class BaseClass {
 	public void bsConfig() {
 		System.out.println(" Create DB connectivity");
 		}
+	@Parameters("browser")
 	@BeforeClass
-	public void bcConfig() throws IOException
+	public void bcConfig(String browser) throws IOException
 	{
-		 driver=new ChromeDriver();
+
+        if(browser.equalsIgnoreCase("chrome"))
+            driver = new ChromeDriver();
+        else if(browser.equalsIgnoreCase("firefox"))
+            driver = new FirefoxDriver();
 		 String URL=putil.getDataFromProperties("url");
 		 sutil.maximizewindow(driver);
 		 sutil.implicitwait(driver, 15);

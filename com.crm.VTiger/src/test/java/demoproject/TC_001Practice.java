@@ -2,6 +2,7 @@ package demoproject;
 
 import java.io.IOException;
 
+
 import org.testng.annotations.Test;
 
 import genericUtility.BaseClass;
@@ -13,20 +14,21 @@ import objectRepo.LeadPage;
 
 public class TC_001Practice extends BaseClass {
 
-	@Test
+	@Test(groups= "smoke")
 	public void createnewLead() throws IOException
 	{
-		HomePage hp=new HomePage(driver);
+		HomePage hp=new HomePage(getDriver());
 		hp.clickOnLeadsMenu();
-		LeadPage lp=new LeadPage(driver);
+		LeadPage lp=new LeadPage(getDriver());
 		lp.CreateLead();
 		String fname=eutil.getSingleCellDataFromExcel("Leads", 1, 1);
 		String lname=eutil.getSingleCellDataFromExcel("Leads", 1, 2);
 		String company=eutil.getSingleCellDataFromExcel("Leads", 1, 3);
-		CreatingNewLeadPage cnlp=new CreatingNewLeadPage(driver);
+		CreatingNewLeadPage cnlp=new CreatingNewLeadPage(getDriver());
 		cnlp.createNewLead(fname,lname,company);
 		System.out.println("New Lead is Created");   
 		
 	}
+	
 	
 }

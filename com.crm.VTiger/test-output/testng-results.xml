@@ -1,79 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-23T23:58:39 IST" name="HybridFrameworkSuite" finished-at="2026-02-23T23:59:35 IST" duration-ms="56032">
+  <suite started-at="2026-03-02T22:46:21 IST" name="HybridFrameworkSuite" finished-at="2026-03-02T22:46:21 IST" duration-ms="0">
     <groups>
+      <group name="smoke">
+        <method signature="TC_004Practice.createnewContact()[pri:0, instance:demoproject.TC_004Practice@564fabc8]" name="createnewContact" class="demoproject.TC_004Practice"/>
+        <method signature="TC_005Practice.createnewContact1()[pri:0, instance:demoproject.TC_005Practice@8f4ea7c]" name="createnewContact1" class="demoproject.TC_005Practice"/>
+        <method signature="TC_006Practice.createnewContact2()[pri:0, instance:demoproject.TC_006Practice@436813f3]" name="createnewContact2" class="demoproject.TC_006Practice"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-02-23T23:58:39 IST" name="ChromeTests" finished-at="2026-02-23T23:59:19 IST" duration-ms="39174">
-      <class name="demoproject.TC_001Practice">
-        <test-method is-config="true" signature="bcConfig(java.lang.String)[pri:0, instance:demoproject.TC_001Practice@7f3b84b8]" started-at="2026-02-23T23:58:39 IST" name="bcConfig" finished-at="2026-02-23T23:58:44 IST" duration-ms="4910" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bcConfig -->
-        <test-method is-config="true" signature="bmConfig()[pri:0, instance:demoproject.TC_001Practice@7f3b84b8]" started-at="2026-02-23T23:58:44 IST" name="bmConfig" finished-at="2026-02-23T23:58:49 IST" duration-ms="4752" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bmConfig -->
-        <test-method signature="createnewLead()[pri:0, instance:demoproject.TC_001Practice@7f3b84b8]" started-at="2026-02-23T23:58:49 IST" name="createnewLead" finished-at="2026-02-23T23:59:14 IST" duration-ms="24747" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createnewLead -->
-        <test-method is-config="true" signature="amConfig()[pri:0, instance:demoproject.TC_001Practice@7f3b84b8]" started-at="2026-02-23T23:59:14 IST" name="amConfig" finished-at="2026-02-23T23:59:18 IST" duration-ms="3850" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amConfig -->
-        <test-method is-config="true" signature="acConfig()[pri:0, instance:demoproject.TC_001Practice@7f3b84b8]" started-at="2026-02-23T23:59:18 IST" name="acConfig" finished-at="2026-02-23T23:59:19 IST" duration-ms="817" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- acConfig -->
-      </class> <!-- demoproject.TC_001Practice -->
-    </test> <!-- ChromeTests -->
-    <test started-at="2026-02-23T23:58:39 IST" name="FirefoxTests" finished-at="2026-02-23T23:59:35 IST" duration-ms="56032">
-      <class name="demoproject.TC_001Practice">
-        <test-method is-config="true" signature="bsConfig()[pri:0, instance:demoproject.TC_001Practice@55141def]" started-at="2026-02-23T23:58:39 IST" name="bsConfig" finished-at="2026-02-23T23:58:39 IST" duration-ms="18" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bsConfig -->
-        <test-method is-config="true" signature="bcConfig(java.lang.String)[pri:0, instance:demoproject.TC_001Practice@55141def]" started-at="2026-02-23T23:58:39 IST" name="bcConfig" finished-at="2026-02-23T23:59:10 IST" duration-ms="30522" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bcConfig -->
-        <test-method is-config="true" signature="bmConfig()[pri:0, instance:demoproject.TC_001Practice@55141def]" started-at="2026-02-23T23:59:10 IST" name="bmConfig" finished-at="2026-02-23T23:59:16 IST" duration-ms="5753" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bmConfig -->
-        <test-method signature="createnewLead()[pri:0, instance:demoproject.TC_001Practice@55141def]" started-at="2026-02-23T23:59:16 IST" name="createnewLead" finished-at="2026-02-23T23:59:31 IST" duration-ms="15052" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createnewLead -->
-        <test-method is-config="true" signature="amConfig()[pri:0, instance:demoproject.TC_001Practice@55141def]" started-at="2026-02-23T23:59:31 IST" name="amConfig" finished-at="2026-02-23T23:59:33 IST" duration-ms="2312" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amConfig -->
-        <test-method is-config="true" signature="acConfig()[pri:0, instance:demoproject.TC_001Practice@55141def]" started-at="2026-02-23T23:59:33 IST" name="acConfig" finished-at="2026-02-23T23:59:35 IST" duration-ms="2317" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- acConfig -->
-        <test-method is-config="true" signature="asConfig()[pri:0, instance:demoproject.TC_001Practice@55141def]" started-at="2026-02-23T23:59:35 IST" name="asConfig" finished-at="2026-02-23T23:59:35 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- asConfig -->
-      </class> <!-- demoproject.TC_001Practice -->
-    </test> <!-- FirefoxTests -->
   </suite> <!-- HybridFrameworkSuite -->
 </testng-results>

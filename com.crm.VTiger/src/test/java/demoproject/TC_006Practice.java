@@ -14,12 +14,12 @@ import objectRepo.LeadPage;
 public class TC_006Practice extends BaseClass {
 
 	
-	@Test
+	@Test(groups="smoke")
 	public void createnewContact2() throws IOException
 	{
-		HomePage hp=new HomePage(driver);
+		HomePage hp=new HomePage(getDriver());
 		hp.clickOnContactsMenu();
-		ContactPage cp=new ContactPage(driver);
+		ContactPage cp=new ContactPage(getDriver());
 		cp.CreateContact();
 		String lname=eutil.getSingleCellDataFromExcel("Contacts", 7, 1);
 		String department=eutil.getSingleCellDataFromExcel("Contacts", 7, 2);
@@ -27,7 +27,7 @@ public class TC_006Practice extends BaseClass {
 		String maillingcity=eutil.getSingleCellDataFromExcel("Contacts", 7, 4);
 		String maillingstate=eutil.getSingleCellDataFromExcel("Contacts", 7, 5);
 		String maillingcountry=eutil.getSingleCellDataFromExcel("Contacts", 7, 6);
-		CreatingnewContact cnlp=new CreatingnewContact(driver);
+		CreatingnewContact cnlp=new CreatingnewContact(getDriver());
 		cnlp.createNewContact(lname,department,email,maillingcity,maillingstate,maillingcountry);
 		System.out.println("New Contact is Created");
 		

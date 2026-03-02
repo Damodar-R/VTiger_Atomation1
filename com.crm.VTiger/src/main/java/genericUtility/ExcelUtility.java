@@ -26,7 +26,7 @@ public class ExcelUtility {
      * @throws IOException
      */
 
-    public static String getSingleCellDataFromExcel(
+    public  String getSingleCellDataFromExcel(
             String sheetName,
             int rowIndex,
             int cellIndex
@@ -57,7 +57,7 @@ public class ExcelUtility {
      * @throws EncryptedDocumentException
      * @throws IOException
      */
-    public static List<String> getMultipleDataFromExcel(String sheetName, int startRowIndex,int startCellIndex) throws EncryptedDocumentException, IOException {
+    public  List<String> getMultipleDataFromExcel(String sheetName, int startRowIndex,int startCellIndex) throws EncryptedDocumentException, IOException {
     FileInputStream fis=new FileInputStream(IPathUtility.excelPath);
     Workbook wb=WorkbookFactory.create(fis);
     DataFormatter df=new DataFormatter();
@@ -82,7 +82,7 @@ public class ExcelUtility {
      * @param path
      * @throws IOException
      */
-    public static void writeDataToExcelSheetCell(
+    public  void writeDataToExcelSheetCell(
             String sheetName,
             int cellNum,
             String value
@@ -108,7 +108,7 @@ public class ExcelUtility {
      * @param value
      * @throws IOException
      */
-    public static void writeDataToNewExcelSheetCell(
+    public  void writeDataToNewExcelSheetCell(
             String sheetName,
             int rowIndex,
             int cellIndex,
@@ -126,7 +126,7 @@ public class ExcelUtility {
          wb.close();
       
     }
-    public static void updateRowDataInExcelSheetCell(
+    public  void updateRowDataInExcelSheetCell(
             String sheetName,
             int rowIndex,
             int cellNum,

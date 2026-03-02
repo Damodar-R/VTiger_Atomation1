@@ -14,12 +14,12 @@ import objectRepo.LeadPage;
 public class TC_003Practice extends BaseClass {
 
 	
-	@Test
+	@Test(groups= "smoke")
 	public void createnewLead2() throws IOException
 	{
-		HomePage hp=new HomePage(driver);
+		HomePage hp=new HomePage(getDriver());
 		hp.clickOnLeadsMenu();
-		LeadPage lp=new LeadPage(driver);
+		LeadPage lp=new LeadPage(getDriver());
 		lp.CreateLead();
 		String lname=eutil.getSingleCellDataFromExcel("Leads", 7, 1);
 		String company=eutil.getSingleCellDataFromExcel("Leads", 7, 2);
@@ -28,7 +28,7 @@ public class TC_003Practice extends BaseClass {
 		String email=eutil.getSingleCellDataFromExcel("Leads", 7, 5);
 		String state=eutil.getSingleCellDataFromExcel("Leads", 7, 6);
 		String country=eutil.getSingleCellDataFromExcel("Leads", 7, 7);
-		CreatingNewLeadPage cnlp=new CreatingNewLeadPage(driver);
+		CreatingNewLeadPage cnlp=new CreatingNewLeadPage(getDriver());
 		cnlp.createNewLead(lname,company,noofemployees,phone,email,state,country);
 		System.out.println("New Lead is Created");
 		

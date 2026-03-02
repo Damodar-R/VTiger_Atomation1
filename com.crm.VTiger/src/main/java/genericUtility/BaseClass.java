@@ -11,13 +11,20 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import objectRepo.HomePage;
 import objectRepo.Loginpage;
 
 public class BaseClass {
-	public WebDriver driver;
+	  private static  ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+	    public static  WebDriver getDriver() {
+	        return driver.get();
+	    }
+	    
 	public propertiesUtility putil=new propertiesUtility();
 	public SeleniumUtility sutil=new SeleniumUtility();
 	public ExcelUtility eutil=new ExcelUtility();
@@ -27,17 +34,22 @@ public class BaseClass {
 		}
 	@Parameters("browser")
 	@BeforeClass
-	public void bcConfig(String browser) throws IOException
+	public void bcConfig(@Optional("chrome")String browser) throws IOException
 	{
+		
 
-        if(browser.equalsIgnoreCase("chrome"))
-            driver = new ChromeDriver();
-        else if(browser.equalsIgnoreCase("firefox"))
-            driver = new FirefoxDriver();
+        if(browser.equalsIgnoreCase("chrome")) {
+        	//System.setProperty("WebDriver.chrome.driver","/com.crm.VTiger/src/test/resources/WebDrivers/chromedriver.exe");
+            driver.set(new ChromeDriver());
+        }
+         if(browser.equalsIgnoreCase("firefox"))
+            {
+        	 driver.set(new FirefoxDriver());
+            }
 		 String URL=putil.getDataFromProperties("url");
-		 sutil.maximizewindow(driver);
-		 sutil.implicitwait(driver, 15);
-		 sutil.accessApplication(driver,URL);
+		 sutil.maximizewindow(getDriver());
+		 sutil.implicitwait(getDriver(), 15);
+		 sutil.accessApplication(getDriver(),URL);
 		 System.out.println("Brower launched Successfully");
 		
 	}
@@ -45,21 +57,21 @@ public class BaseClass {
 	public void bmConfig() throws IOException {
 		String UN=putil.getDataFromProperties("username");
 		String PS=putil.getDataFromProperties("password");
-		Loginpage lp=new Loginpage(driver);
+		Loginpage lp=new Loginpage(getDriver());
 		lp.login(UN, PS);
 		System.out.println("Login done Successfully");
 	}
 	@AfterMethod
 	public void amConfig()
 	{
-		HomePage hp=new HomePage(driver);
-		hp.logoutOperation(driver);
+		HomePage hp=new HomePage(getDriver());
+		hp.logoutOperation(getDriver());
 		System.out.println("Logout done Successfully");
 	}
 	@AfterClass
 	public void acConfig()
 	{
-		driver.quit();
+		getDriver().quit();
 		 System.out.println("Brower closed Successfully");
 	}
 

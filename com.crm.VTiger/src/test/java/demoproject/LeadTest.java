@@ -12,7 +12,7 @@ import objectRepo.CreatingnewContact;
 import objectRepo.HomePage;
 import objectRepo.LeadPage;
 
-public class TC_002Practice extends BaseClass {
+public class LeadTest extends BaseClass {
 
 	
 	@Test(groups= "smoke")

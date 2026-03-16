@@ -1,24 +1,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="HybridFrameworkSuite"
-       parallel="classes"
-       thread-count="2"
-       >
+<suite name="HybridFrameworkSuite" parallel="classes" thread-count="2">
 
-   <!-- Listener for reports & screenshots -->
    <listeners>
       <listener class-name="genericUtility.ListenersImplementation"/>
    </listeners>
 
    <test name="chromeTests">
       <parameter name="browser" value="chrome"/>
-        
+
       <classes>
-         <class name="demoproject.TC_001Practice"/>
-          <class name="demoproject.TC_002Practice"/>
+         <class name="demoproject.CreateTest"/>
+        
       </classes>
+
    </test>
 
-   <!-- ========== Firefox Execution ========== -->
- 
 </suite>

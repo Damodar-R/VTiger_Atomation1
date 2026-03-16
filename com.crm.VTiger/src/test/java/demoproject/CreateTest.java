@@ -12,7 +12,7 @@ import objectRepo.CreatingnewContact;
 import objectRepo.HomePage;
 import objectRepo.LeadPage;
 
-public class TC_001Practice extends BaseClass {
+public class CreateTest extends BaseClass {
 
 	@Test(groups= "smoke")
 	public void createnewLead() throws IOException

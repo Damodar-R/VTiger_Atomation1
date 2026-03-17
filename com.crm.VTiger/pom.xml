@@ -81,10 +81,12 @@
    <version>3.5.4</version>
 
    <configuration>
-    <suiteXmlFiles>
-     <suiteXmlFile>testng.xml</suiteXmlFile>
-     <suiteXmlFile>testng1.xml</suiteXmlFile>
-    </suiteXmlFiles>
+   <suite name="MasterSuite">
+  <suite-files>
+    <suite-file path="testng.xml"/>
+    <suite-file path="testng1.xml"/>
+  </suite-files>
+</suite>
    </configuration>
 
    <dependencies>

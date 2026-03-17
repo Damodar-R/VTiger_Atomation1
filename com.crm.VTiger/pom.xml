@@ -75,30 +75,18 @@
   </plugin>
 
   <!-- Surefire Plugin -->
-  <plugin>
-   <groupId>org.apache.maven.plugins</groupId>
-   <artifactId>maven-surefire-plugin</artifactId>
-   <version>3.5.4</version>
-
-   <configuration>
-   <suite name="MasterSuite">
-  <suite-files>
-    <suite-file path="testng.xml"/>
-    <suite-file path="testng1.xml"/>
-  </suite-files>
-</suite>
-   </configuration>
-
-   <dependencies>
-    <dependency>
-     <groupId>org.testng</groupId>
-     <artifactId>testng</artifactId>
-     <version>7.11.0</version>
-    </dependency>
-   </dependencies>
-
-  </plugin>
-
- </plugins>
+  
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.5.4</version>
+      <configuration>
+        <suiteXmlFiles>
+          <suiteXmlFile>testng.xml</suiteXmlFile>
+          <suiteXmlFile>testng1.xml</suiteXmlFile>
+        </suiteXmlFiles>
+      </configuration>
+    </plugin>
+  </plugins>
 </build>
 </project>

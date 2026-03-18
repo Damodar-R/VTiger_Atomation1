@@ -6,7 +6,7 @@
       <listener class-name="genericUtility.ListenersImplementation"/>
    </listeners>
 
-   <test name="chromeTests">
+   <test name="regression">
       <parameter name="browser" value="chrome"/>
 
       <classes>

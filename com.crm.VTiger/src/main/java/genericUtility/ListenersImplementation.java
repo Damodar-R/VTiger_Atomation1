@@ -103,7 +103,7 @@ public class ListenersImplementation implements ITestListener
 		ExtentSparkReporter reporter = new ExtentSparkReporter(".\\Extent Reports\\report-"+dateTimeStamp+".html");
 		reporter.config().setDocumentTitle("Extent Reports");
 		reporter.config().setReportName("VTiger Reports");
-		reporter.config().setTheme(Theme.STANDARD);
+		reporter.config().setTheme(Theme.DARK);
 		
 		//Generate empty report
 		reports = new ExtentReports();

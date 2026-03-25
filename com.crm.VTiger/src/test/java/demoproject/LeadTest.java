@@ -20,6 +20,7 @@ public class LeadTest extends BaseClass {
 	{
 		HomePage hp=new HomePage(getDriver());
 		hp.clickOnLeadsMenu();
+		//new line added to test git
 		LeadPage lp=new LeadPage(getDriver());
 		lp.CreateLead();
 		String lname=eutil.getSingleCellDataFromExcel("Leads", 4, 1);
